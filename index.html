@@ -1,0 +1,164 @@
+<!--
++[返回目录]
+
+LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
++[打开](,LaTeX数学记号)
+-->
+
+<html>
+  <head>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!--
+Nini, 打开JS编译器(文件)
+parser
+保存:...
+-->
+
+<script type="text/javascript" src="https://xiantaocheng.github.io/structure.js/"></script>
+<script>
+function print() {
+    if(document.getElementById("cmd_window").innerHTML===null) {
+        return;
+    }
+
+    document.getElementById("cmd_window").innerHTML+="<br>";
+    for (var i=0; i < arguments.length; i++) {
+        text=arguments[i];
+        document.getElementById("cmd_window").innerHTML+=" "+text;
+    }
+}
+
+function arrayRemove(arr,value) {
+    a=arr.filter(function(ele) {
+            return ele!=value;
+        }
+    );
+    return a;
+}
+</script>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+/* Style the content */
+.content {
+  background-color: #fff;
+  padding: 10px;
+}
+
+/*
++[网页](web,实验室日历模板)
+*/
+
+/* Style the footer */
+.footer {
+  background-color: #333;
+  padding: 10px;
+  margin-top: 20px
+}
+
+.footer p {
+  color: #ddd
+}
+
+</style>
+
+
+  </head>
+
+
+<body>
+<div class="topnav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+
+
+<div class="content">
+    <p><mathjax style=\"font-size:1.5em\">
+<!--
+Nini, 打开网页画板(文件)
++[H函数](,测试模板)
+参考1::https://www.w3schools.com/tags/tag_textarea.asp
++[打开网页](,参考1)
+
+Nini, 打开核心(文件)
+-->
+
+<textarea id='code_box' rows=20 cols=50>
++蟑螂->+正义(+蟑螂,)->+蟑螂->+正义(+蟑螂,)->+蟑螂->+正义(+蟑螂,);
++蟑螂->+邪恶(+蟑螂,)->+蟑螂->+邪恶(+蟑螂,)->+蟑螂->+邪恶(+蟑螂,);
+[]=>蟑螂=>[]:->正义(蟑螂,)->+[消息窗口]"Hello world!",
+    ->邪恶(蟑螂,)->+[消息窗口]"Hello SB!"
+</textarea>
+<textarea id='pt_box' rows=20 cols=50>
+[]
+</textarea>
+<br>
+<button onclick="runCode()">run</button>
+<br>
+<p id="cmd_window">Hellow world!</p>
+
+<script>
+var list_pt=[];
+var a=new NetP('A');
+var km=new Karma(a);
+var parser=new Parser();
+var code_box=document.getElementById("code_box");
+var pt_box=document.getElementById("pt_box");
+function runCode() {
+    code=code_box.value;
+    run_code(code,list_pt,parser);
+    operation(list_pt);
+    pt_box.value=info_PtList(list_pt);
+}
+</script>
+
+
+<!--
++[H函数](,测试模板)
+-->
+    </mathjax></p>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>
